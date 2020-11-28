@@ -297,6 +297,8 @@ void main(){
 		cout<<"exit"<<endl;
 
 	char input = getch();
+		
+	cout<<"Hi, mahmoud from the other side"<<endl<<endl;
 
 	clrscr();
 
