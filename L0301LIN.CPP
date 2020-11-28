@@ -165,7 +165,8 @@ int deleteNode(int key){
 		}
 		
 	int deleteNode(int key){
-
+		
+                        cout<<"mostafa abdalla :D"
 			Node *temp;
 
 			if(!start) return 0;
