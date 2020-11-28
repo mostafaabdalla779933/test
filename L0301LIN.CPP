@@ -111,7 +111,58 @@ class LinkedList{
 
 	}
 
+int deleteNode(int key){
 
+			Node *temp;
+
+			if(!start) return 0;
+
+			temp = searchOnNode(key);
+
+			if(!temp) return 0;
+
+			if(start==temp && end == temp){
+
+				start = end = NULL;
+
+				free(temp);
+
+			}
+
+			else{
+				if(end == temp){
+
+					end = end->perv;
+					end->next = NULL;
+					free(temp);
+
+
+				}
+				else if(start == temp){
+
+					start = start->next;
+					start->perv = NULL;
+					free(temp);
+
+				}
+
+				else{
+
+					temp->perv->next = temp->next;
+
+
+					temp->next->perv = temp->perv;
+
+
+					free(temp);
+
+				}
+
+				size--;
+				return 1;
+
+			 }
+		}
 		
 	int deleteNode(int key){
 
